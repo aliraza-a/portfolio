@@ -40,7 +40,7 @@ export function Hero() {
 
       <div className="max-w-6xl mx-auto px-6 py-20 relative z-10">
         <div className="flex flex-col items-center text-center">
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -49,7 +49,7 @@ export function Hero() {
             <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium">
               Available for work
             </span>
-          </motion.div>
+          </motion.div> */}
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-xl md:text-2xl text-muted-foreground mb-6"
           >
-            Web Developer & Head of Production
+            Web Developer
           </motion.p>
 
           <motion.p
@@ -120,7 +120,11 @@ export function Hero() {
                 href: "https://linkedin.com/in/a1irazaaa",
                 label: "LinkedIn",
               },
-              { icon: Github, href: "#", label: "GitHub" },
+              {
+                icon: Github,
+                href: "https://github.com/aliraza-a",
+                label: "GitHub",
+              },
             ].map((social) => (
               <motion.a
                 key={social.label}
