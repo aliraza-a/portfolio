@@ -7,7 +7,7 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ali Raza | Web Developer & Head of Production",
+  title: "Ali Raza | Web Developer",
   description:
     "Results-driven Web Developer with 4+ years of experience delivering high-performance websites and web applications. Expert in React, Next.js, and modern frontend technologies.",
   keywords: [
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Ali Raza" }],
   openGraph: {
-    title: "Ali Raza | Web Developer & Head of Production",
+    title: "Ali Raza | Web Developer",
     description:
       "Results-driven Web Developer with 4+ years of experience delivering high-performance websites.",
     type: "website",
