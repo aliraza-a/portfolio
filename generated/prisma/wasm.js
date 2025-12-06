@@ -154,7 +154,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\HP\\Downloads\\portfolio\\generated\\prisma",
+      "value": "D:\\DEVELOPMENT\\nextjs\\portfolio\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -165,10 +165,14 @@ const config = {
         "fromEnvVar": null,
         "value": "windows",
         "native": true
+      },
+      {
+        "fromEnvVar": null,
+        "value": "rhel-openssl-3.0.x"
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\HP\\Downloads\\portfolio\\prisma\\schema.prisma",
+    "sourceFilePath": "D:\\DEVELOPMENT\\nextjs\\portfolio\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -190,8 +194,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "// prisma/schema.prisma\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Project {\n  id              String        @id @default(auto()) @map(\"_id\") @db.ObjectId\n  title           String\n  slug            String        @unique\n  description     String\n  longDescription String?\n  thumbnail       String\n  images          String[]\n  liveUrl         String?\n  githubUrl       String?\n  technologies    String[]\n  category        String\n  featured        Boolean       @default(false)\n  status          ProjectStatus @default(DRAFT)\n  order           Int           @default(0)\n  createdAt       DateTime      @default(now())\n  updatedAt       DateTime      @updatedAt\n}\n\nenum ProjectStatus {\n  DRAFT\n  PUBLISHED\n  ARCHIVED\n}\n\nmodel Message {\n  id        String        @id @default(auto()) @map(\"_id\") @db.ObjectId\n  name      String\n  email     String\n  subject   String\n  message   String\n  status    MessageStatus @default(UNREAD)\n  starred   Boolean       @default(false)\n  createdAt DateTime      @default(now())\n  updatedAt DateTime      @updatedAt\n}\n\nenum MessageStatus {\n  UNREAD\n  READ\n  REPLIED\n  ARCHIVED\n}\n",
-  "inlineSchemaHash": "0abaf55cdb40e9d01d0c5b5b355ffc14667977e73a2847397851738c6030ecfa",
+  "inlineSchema": "// prisma/schema.prisma\ngenerator client {\n  provider      = \"prisma-client-js\"\n  output        = \"../generated/prisma\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Project {\n  id              String        @id @default(auto()) @map(\"_id\") @db.ObjectId\n  title           String\n  slug            String        @unique\n  description     String\n  longDescription String?\n  thumbnail       String\n  images          String[]\n  liveUrl         String?\n  githubUrl       String?\n  technologies    String[]\n  category        String\n  featured        Boolean       @default(false)\n  status          ProjectStatus @default(DRAFT)\n  order           Int           @default(0)\n  createdAt       DateTime      @default(now())\n  updatedAt       DateTime      @updatedAt\n}\n\nenum ProjectStatus {\n  DRAFT\n  PUBLISHED\n  ARCHIVED\n}\n\nmodel Message {\n  id        String        @id @default(auto()) @map(\"_id\") @db.ObjectId\n  name      String\n  email     String\n  subject   String\n  message   String\n  status    MessageStatus @default(UNREAD)\n  starred   Boolean       @default(false)\n  createdAt DateTime      @default(now())\n  updatedAt DateTime      @updatedAt\n}\n\nenum MessageStatus {\n  UNREAD\n  READ\n  REPLIED\n  ARCHIVED\n}\n",
+  "inlineSchemaHash": "b9f06eeb67cbadd847bb97aee60882909f56937882be8e4cc66733380e627723",
   "copyEngine": true
 }
 config.dirname = '/'
